@@ -1,0 +1,7 @@
+u-boot-sunxi-with-spl.bin contains U-Boot and ARM Trusted Firmware
+
+https://source.denx.de/u-boot/u-boot
+https://source.denx.de/u-boot/u-boot/-/blob/master/Licenses/README
+
+https://github.com/ARM-software/arm-trusted-firmware
+https://github.com/ARM-software/arm-trusted-firmware/blob/master/docs/license.rst

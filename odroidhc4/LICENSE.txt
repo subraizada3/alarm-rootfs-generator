@@ -1,0 +1,5 @@
+hardkernel-u-boot.bin downloaded from
+	https://github.com/hardkernel/u-boot/releases/download/travis%2Fodroidc4-189/u-boot-odroidc4-189.tar.gz
+
+Source and license at:
+https://github.com/hardkernel/u-boot/archive/refs/tags/travis/odroidc4-189.tar.gz
