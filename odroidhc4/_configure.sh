@@ -41,15 +41,15 @@ echo "echo disabled | tee /sys/devices/virtual/thermal/thermal_zone*/mode" >>/st
 cat >/boot/boot.ini <<EOF
 ODROIDC4-UBOOT-CONFIG
 
-setenv bootargs "root=/dev/mmcblk0p2 rootwait rw console=ttyAML0,115200n8 console=tty1 no_console_suspend fsck.repair=yes \${amlogic}"
+setenv bootargs "root=/dev/mmcblk0p2 rootwait rw console=ttyAML0,115200n8 console=tty1"
 
 setenv dtb_loadaddr "0x20000000"
 setenv initrd_loadaddr "0x4080000"
 setenv loadaddr "0x1080000"
 
-load mmc \${devno}:1 \${dtb_loadaddr} /dtbs/amlogic/meson-sm1-odroid-hc4.dtb
-load mmc \${devno}:1 \${initrd_loadaddr} /initramfs-linux.uimg
-load mmc \${devno}:1 \${loadaddr} /Image
+load mmc 1:1 \${dtb_loadaddr} /dtbs/amlogic/meson-sm1-odroid-hc4.dtb
+load mmc 1:1 \${initrd_loadaddr} /initramfs-linux.uimg
+load mmc 1:1 \${loadaddr} /Image
 
 booti \${loadaddr} \${initrd_loadaddr} \${dtb_loadaddr}
 EOF
