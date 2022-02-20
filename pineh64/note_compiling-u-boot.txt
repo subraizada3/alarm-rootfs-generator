@@ -1,0 +1,20 @@
+How to build ATF and U-Boot for Pine H64
+
+
+
+git clone https://github.com/ARM-software/arm-trusted-firmware.git
+# master is currently on 8d9c1b3ca5f11c50150ff368981883c2ea444b66
+
+git clone https://gitlab.denx.de/u-boot/u-boot.git
+# master is currently on 8ad1c9c26f7740806a162818b790d4a72f515b7e
+
+
+
+cd arm-trusted-firmware
+CROSS_COMPILE=aarch64-linux-gnu- make PLAT=sun50i_h6 bl31
+
+cd ../u-boot
+
+cp ../arm-trusted-firmware/build/sun50i_h6/release/bl31.bin .
+make pine_h64_defconfig
+CROSS_COMPILE=aarch64-linux-gnu- SCP=/dev/null make -j16 all

@@ -18,13 +18,6 @@ echo LANG=en_US.UTF-8 >/etc/locale.conf
 
 
 
-cat <<EOF >>/etc/fstab
-/dev/mmcblk0p2 / ext4 rw,relatime 0 1
-/dev/mmcblk0p1 /boot vfat rw,relatime 0 2
-EOF
-
-
-
 echo $HOSTNAME >/etc/hostname
 cat <<EOF >>/etc/hosts
 127.0.0.1 localhost

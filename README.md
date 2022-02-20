@@ -4,7 +4,7 @@ This collection of scripts can prepare an Arch Linux ARM (ALARM) rootfs, then op
 
 The following boards are currently supported:
 - Odroid HC4
-- Pine H64 - currently in development - U-Boot is not working
+- Pine H64
 
 However, the rootfs preparation part is completely hardware-agnostic and uses the official generic AArch64 ALARM rootfs as a base.
 
