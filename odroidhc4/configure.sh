@@ -26,3 +26,5 @@ echo USER=$2 >>${1}/configure2.sh
 echo HOSTNAME=$3 >>${1}/configure2.sh
 cat ${SCRIPT_DIR}/_configure.sh >>${1}/configure2.sh
 chmod +x ${1}/configure2.sh
+
+cp ${SCRIPT_DIR}/linux-aarch64-5.15.5-1-aarch64.pkg.tar.xz ${1}/linux-aarch64-5.15.5-1-aarch64.pkg.tar.xz

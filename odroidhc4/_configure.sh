@@ -82,3 +82,6 @@ Exec = /usr/bin/mkimage -A arm64 -O linux -T ramdisk -d /boot/initramfs-linux.im
 EOF
 
 rv=$?; if [ $rv -ne 0 ]; then exit $rv; fi
+
+pacman -U --noconfirm /linux-aarch64-5.15.5-1-aarch64.pkg.tar.xz
+rv=$?; if [ $rv -ne 0 ]; then exit $rv; fi
